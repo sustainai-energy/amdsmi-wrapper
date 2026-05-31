@@ -1,0 +1,9 @@
+[workspace]
+resolver = "3"
+members = [
+    "amdsmi-wrapper",
+    "amdsmi-wrapper-sys",
+    "rocmsmi-wrapper",
+    "rocmsmi-wrapper-sys",
+]
+default-members = ["amdsmi-wrapper", "amdsmi-wrapper-sys"]

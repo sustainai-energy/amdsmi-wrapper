@@ -1,0 +1,20 @@
+# init and shutdown stuff
+amdsmi_init
+amdsmi_init_flags_t
+amdsmi_shut_down
+amdsmi_status_code_to_string
+# device mgmt
+amdsmi_get_processor_handle_from_bdf
+# device ops
+amdsmi_get_clk_freq
+amdsmi_get_gpu_activity
+amdsmi_get_gpu_perf_level
+amdsmi_get_power_cap_info
+amdsmi_get_power_info
+amdsmi_get_supported_power_cap
+amdsmi_is_gpu_power_management_enabled
+amdsmi_set_clk_freq
+amdsmi_set_gpu_clk_limit
+amdsmi_set_gpu_perf_determinism_mode
+amdsmi_set_gpu_perf_level
+amdsmi_set_power_cap

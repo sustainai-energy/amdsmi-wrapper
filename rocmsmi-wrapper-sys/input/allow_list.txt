@@ -1,0 +1,8 @@
+# init and shutdown stuff
+rsmi_init
+rsmi_shut_down
+# device mgmt
+rsmi_dev_busy_percent_get
+rsmi_dev_pci_id_get
+rsmi_dev_power_get
+rsmi_num_monitor_devices

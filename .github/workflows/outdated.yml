@@ -1,0 +1,23 @@
+name: outdated
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 21 * * 0'
+permissions:
+  contents: read
+  actions: write
+env:
+  CARGO_TERM_COLOR: always
+jobs:
+  outdated:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v6
+      with:
+        persist-credentials: false
+    - uses: Swatinem/rust-cache@v2
+    - name: install cargo-outdated
+      run: cargo install cargo-outdated --locked
+    - name: outdated
+      run: cargo outdated --root-deps-only --exit-code 1

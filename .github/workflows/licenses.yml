@@ -1,0 +1,23 @@
+name: licenses
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 21 * * 0'
+permissions:
+  contents: read
+  actions: write
+env:
+  CARGO_TERM_COLOR: always
+jobs:
+  licenses:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout repository
+      uses: actions/checkout@v6
+      with:
+        persist-credentials: false
+    - uses: Swatinem/rust-cache@v2
+    - name: install cargo-deny
+      run: cargo install cargo-deny --locked
+    - name: licenses
+      run: cargo deny check licenses
