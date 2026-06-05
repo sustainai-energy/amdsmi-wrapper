@@ -4,11 +4,14 @@
 
 fn main() {
     println!("cargo:rerun-if-changed=input/allow_list.txt");
+    let rocm_include = std::env::var("ROCM_INCLUDE_PATH").unwrap_or_else(|_| "input".to_string());
+    let header_path = if rocm_include == "input" {
+        format!("{}/rocm_smi-7.2.3.h", rocm_include)
+    } else {
+        format!("{}/rocm_smi/rocm_smi.h", rocm_include)
+    };
     let allowlist =
         std::fs::read_to_string("input/allow_list.txt").expect("Failed to read allow_list.txt");
-    let rocm_include = std::env::var("ROCM_INCLUDE_PATH")
-        .unwrap_or_else(|_| "/opt/rocm-7.2.3/include".to_string());
-    let header_path = format!("{}/rocm_smi/rocm_smi.h", rocm_include);
     let mut builder = bindgen::Builder::default()
         .clang_arg("-xc++")
         .clang_arg(format!("-I{}", rocm_include))
