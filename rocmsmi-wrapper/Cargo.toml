@@ -6,6 +6,6 @@ license = "Apache-2.0"
 repository = "https://github.com/sustainai-energy/amdsmi-wrapper/tree/main/rocmsmi-wrapper"
 
 [dependencies]
-libloading = { version = "0.9.0" }
-rocmsmi-wrapper-sys = { path = "../rocmsmi-wrapper-sys" }
-thiserror = { version = "2.0.20" }
+libloading = { version = "0.9" }
+rocmsmi-wrapper-sys = { path = "../rocmsmi-wrapper-sys", version = "0.1.0" }
+thiserror = { version = "2.0" }

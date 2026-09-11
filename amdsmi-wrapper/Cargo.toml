@@ -6,6 +6,6 @@ license = "Apache-2.0"
 repository = "https://github.com/sustainai-energy/amdsmi-wrapper/tree/main/amdsmi-wrapper"
 
 [dependencies]
-amdsmi-wrapper-sys = { path = "../amdsmi-wrapper-sys" }
-libloading = { version = "0.9.0" }
-thiserror = { version = "2.0.20" }
+amdsmi-wrapper-sys = { path = "../amdsmi-wrapper-sys", version = "0.1.0" }
+libloading = { version = "0.9" }
+thiserror = { version = "2.0" }

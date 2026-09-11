@@ -9,7 +9,7 @@ repository = "https://github.com/sustainai-energy/amdsmi-wrapper/tree/main/amdsm
 ignored = ["bindgen", "libloading"]
 
 [dependencies]
-libloading = { version = "0.9.0" }
+libloading = { version = "0.9" }
 
 [build-dependencies]
-bindgen = { git = "https://github.com/rust-lang/rust-bindgen.git" }
+bindgen = { version = "0.73" }
