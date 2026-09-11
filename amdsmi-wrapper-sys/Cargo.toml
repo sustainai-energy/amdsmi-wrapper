@@ -3,6 +3,7 @@ name = "amdsmi-wrapper-sys"
 version = "0.1.0"
 edition = "2024"
 license = "Apache-2.0"
+description = "Low-level FFI bindings for the AMD System Management Interface (AMD SMI) library"
 repository = "https://github.com/sustainai-energy/amdsmi-wrapper/tree/main/amdsmi-wrapper-sys"
 
 [package.metadata.cargo-machete]

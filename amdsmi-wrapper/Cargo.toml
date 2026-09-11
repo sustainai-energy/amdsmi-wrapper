@@ -3,6 +3,7 @@ name = "amdsmi-wrapper"
 version = "0.1.0"
 edition = "2024"
 license = "Apache-2.0"
+description = "Safe Rust wrapper for the AMD System Management Interface (AMD SMI) library"
 repository = "https://github.com/sustainai-energy/amdsmi-wrapper/tree/main/amdsmi-wrapper"
 
 [dependencies]
